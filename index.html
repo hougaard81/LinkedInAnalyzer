@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- These meta tags help our page work correctly -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title shows up in the browser tab -->
+    <title>LinkedIn Profile Analyzer</title>
+
+    <!-- Links to our resources (favicon, styles, fonts) -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container for all our content -->
+    <div class="container">
+        <!-- Page Title -->
+        <h1>LinkedIn Profile Analyzer</h1>
+        
+        <!-- User Instructions -->
+        <p>Indsæt din LinkedIn profiltekst herunder for at få en analyse:</p>
+        
+        <!-- Text input area -->
+        <textarea 
+            id="profileInput" 
+            placeholder="Kopier og indsæt din LinkedIn profiltekst her..."
+            aria-label="LinkedIn profile text input">
+        </textarea>
+
+        <!-- Analysis Button -->
+        <button id="analyzeButton">Analyser Profil</button>
+        
+        <!-- Results Area -->
+        <div class="results" id="results">
+            <!-- Career Timeline -->
+            <div id="timelineSection" class="section hidden">
+                <h2>Din Karriere Tidslinje</h2>
+                <div id="timeline" class="timeline"></div>
+            </div>
+
+            <!-- Profile Keywords -->
+            <div id="keywordsSection" class="section hidden">
+                <h2>Nøgleord i Din Profil</h2>
+                <div id="keywords" class="keywords"></div>
+            </div>
+
+            <!-- Improvement Suggestions -->
+            <div id="suggestionsSection" class="section hidden">
+                <h2>Forbedringsforslag</h2>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load our JavaScript file -->
+    <script src="functions.js"></script>
+</body>
+</html>
